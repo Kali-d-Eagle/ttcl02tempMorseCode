@@ -1,6 +1,6 @@
-// if (localStorage.getItem("auth") !== "true") {
-//   window.location.href = "login.html";
-// }
+if (localStorage.getItem("auth") !== "true") {
+  window.location.href = "login.html";
+}
 
 document.getElementById("logoutBtn").onclick = () => {
   localStorage.removeItem("auth");
