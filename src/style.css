@@ -1,0 +1,795 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    background: #0d0d0d;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* MAIN APP */
+  .app {
+    width: min(90%, 800px);
+  }
+  
+  /* TITLE */
+  h1 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* INPUT */
+  textarea {
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* OUTPUT SPLIT */
+  .output-section {
+    margin-top: 13px;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .box {
+    flex: 1;
+    background: #111;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #222;
+  }
+  
+  .box h3 {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* TEXT DISPLAY */
+  #textOutput span,
+  #morseOutput span {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+  
+  /* ACTIVE HIGHLIGHT */
+  .active {
+    background: #00c2ff;
+    color: black;
+  }
+  
+  /* MORSE STYLE */
+  #morseOutput {
+    font-family: monospace;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #00c2ff;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    opacity: 0.85;
+  }
+
+  .controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #voiceBtn {
+    background: #1db954; /* nice green mic button */
+    color: black;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #00c2ff;
+  }
+
+
+  /* OTP BOXES */
+.otp-container {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.otp-box {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+}
+
+/* PREMIUM LOOK */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.app {
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 194, 255, 0.3);
+}
+
+button {
+  box-shadow: 0 0 15px #00c2ff;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* THEME BUTTON */
+#themeToggle {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #00c2ff;
+  border: none;
+  cursor: pointer;
+}
+
+/* PROFILE */
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00c2ff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+  min-width: 120px;
+  border: 1px solid #333;
+}
+
+.dropdown p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.8rem;
+}
+
+/* SHOW DROPDOWN */
+.profile.active .dropdown {
+  display: block;
+}
+
+/* LIGHT MODE */
+.light {
+  background: #f5f5f5;
+  color: black;
+}
+
+.light .box,
+.light textarea {
+  background: white;
+  color: black;
+}
+
+.light .dropdown {
+  background: white;
+  color: black;
+}
+
+
+
+/* HOVER USERNAME */
+.hover-name {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #111;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  display: none;
+  white-space: nowrap;
+}
+
+/* SHOW ON HOVER */
+.profile:hover .hover-name {
+  display: block;
+}
+
+/* LIGHT MODE FIX */
+.light .hover-name {
+  background: white;
+  color: black;
+}
+
+/* DEFAULT (DARK MODE) */
+#userNameDisplay {
+  color: white;
+}
+
+/* LIGHT MODE */
+.light #userNameDisplay {
+  color: black;
+}
+
+
+.hover-name {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.profile:hover .hover-name {
+  opacity: 1;
+}
+
+
+
+/* AVATAR FIX */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* always circle */
+  background: #00c2ff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* PREVENT SHAPE CHANGE */
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+/* REMOVE ANY UNWANTED EFFECT */
+.profile.active .avatar {
+  border-radius: 50%; /* force circle */
+}
+
+/* ✨ GLOW EFFECT WHEN ACTIVE */
+.profile.active .avatar {
+  box-shadow: 0 0 12px #00c2ff, 0 0 25px rgba(0, 194, 255, 0.6);
+}
+
+/* OPTIONAL HOVER EFFECT */
+.profile:hover .avatar {
+  box-shadow: 0 0 8px rgba(0, 194, 255, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROFILE WRAPPER */
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+/* GRADIENT RING CONTAINER */
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5,
+    #feda75
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px; /* ring thickness */
+  transition: 0.3s;
+}
+
+/* INNER CIRCLE */
+/* .avatar::before {
+  content: "U";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+} */
+
+/* LIGHT MODE FIX */
+/* .light .avatar::before {
+  background: white;
+  color: black;
+} */
+
+/* ACTIVE GLOW */
+/* .profile.active .avatar {
+  box-shadow: 0 0 15px rgba(255, 100, 200, 0.8);
+}
+
+/* HOVER EFFECT */
+.profile:hover .avatar {
+  transform: scale(1.05);
+} 
+
+
+
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 140px;
+  border: 1px solid #333;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+/* SHOW ANIMATION */
+.profile.active .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* LIGHT MODE */
+.light .dropdown {
+  background: white;
+  color: black;
+}
+
+
+
+
+
+.hover-name {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+.profile:hover .hover-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROFILE */
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+/* 🌈 GRADIENT RING (REAL INSTAGRAM STYLE) */
+.avatar-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5,
+    #feda75
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  transition: 0.3s;
+}
+
+/* INNER AVATAR (ALWAYS PERFECT CIRCLE) */
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* LIGHT MODE */
+.light .avatar {
+  background: white;
+  color: black;
+}
+
+/* HOVER */
+.profile:hover .avatar-ring {
+  transform: scale(1.06);
+}
+
+/* ACTIVE GLOW (NO SHAPE CHANGE) */
+.profile.active .avatar-ring {
+  box-shadow: 0 0 12px rgba(255, 0, 150, 0.7);
+}
+
+/* 🪪 HOVER NAME */
+.hover-name {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #111;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+.profile:hover .hover-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.light .hover-name {
+  background: white;
+  color: black;
+}
+
+/* 💫 DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #00c2ff;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 140px;
+  border: 1px solid #333;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+.profile.active .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.light .dropdown {
+  background: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OUTER GRADIENT RING */
+.avatar-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5,
+    #feda75
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+/* INNER AVATAR (MATCHES PAGE BG) */
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  /* IMPORTANT FIX 👇 */
+  background: #0d0d0d;  /* same as your app background */
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* LIGHT MODE FIX */
+.light .avatar {
+  background: #f5f5f5;
+  color: black;
+}
