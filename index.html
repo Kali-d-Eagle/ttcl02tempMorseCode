@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morse Code Translator</title>
+
+  <link rel="stylesheet" href="src/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="app">
+    <h1>Morse Code Translator</h1>
+
+    <textarea id="input" placeholder="Type text or Morse code..."></textarea>
+    <div class="controls">
+        <button id="translateBtn">Translate & Play</button>
+        <button id="voiceBtn">🎤 Speak</button>
+    </div>
+
+  
+
+    <div class="output-section">
+      <div class="box">
+        <h3>TEXT</h3>
+        <div id="textOutput"></div>
+      </div>
+
+      <div class="box">
+        <h3>MORSE</h3>
+        <div id="morseOutput"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="logoutBtn">
+    <button id="logoutBtn">Logout</button>
+  </div> -->
+
+  <div class="top-bar">
+    <div class="right-section">
+  
+      <!-- THEME TOGGLE -->
+      <button id="themeToggle">🌙</button>
+  
+      <!-- PROFILE -->
+      <!-- <div class="profile" id="profile">
+        <div class="avatar">U</div>
+      
+
+        <div class="hover-name" id="hoverName">userXYZ</div>
+      
+        <div class="dropdown" id="dropdown">
+          <p id="userNameDisplay">userXYZ</p>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div> -->
+
+      <div class="profile" id="profile">
+
+        <div class="avatar-ring">
+          <div class="avatar">U</div>
+        </div>
+      
+        <div class="hover-name">userXYZ</div>
+      
+        <div class="dropdown">
+          <p id="userNameDisplay">userXYZ</p>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      
+      </div>
+      
+      </div>
+  
+    </div>
+  </div>
+
+  
+
+  <script src="src/script.js"></script>
+</body>
+</html>
+

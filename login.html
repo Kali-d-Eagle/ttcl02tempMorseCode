@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+body {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.card {
+  width:350px;
+  padding:2rem;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+h2 {
+  text-align:center;
+  color:white;
+  margin-bottom:1.5rem;
+}
+
+input {
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border-radius:8px;
+  border:none;
+  background:#111;
+  color:white;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#00c2ff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.85;
+}
+
+.status {
+  color:white;
+  text-align:center;
+  margin-top:10px;
+}
+
+.password-container {
+    position: relative;
+  }
+  
+  .password-container input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* space for eye */
+    border-radius: 8px;
+    border: none;
+    background: #111;
+    color: white;
+  }
+  
+  #togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🔐 Login</h2>
+
+  <input id="username" placeholder="Username">
+  <!-- <input id="password" type="password" placeholder="Password"> -->
+  <div class="password-container">
+    <input id="password" type="password" placeholder="Password">
+    <span id="togglePassword">👁️</span>
+  </div>
+
+<button id="loginBtn">Login</button>
+
+  <div class="status" id="status"></div>
+</div>
+
+<script>
+    const USERNAME = "nirupArya";
+    const PASSWORD = "nirupArya@123!";
+    
+    loginBtn.onclick = () => {
+      status.textContent = "Checking...";
+    
+      if (
+        username.value === USERNAME &&
+        password.value === PASSWORD
+      ) {
+        localStorage.setItem("auth", "true");
+        window.location.href = "index.html";
+      } else {
+        status.textContent = "Invalid credentials ❌";
+      }
+    };
+</script>
+
+</body>
+</html>
